@@ -1,0 +1,706 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>김수민_Portfolio</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="557a98d8-d5c3-4fe2-89c6-2e9d0cda25a0" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1510673398445-94f476ef2cbc?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">김수민_Portfolio</h1><p class="page-description"></p></header><div class="page-body"><h3 id="1aa45e06-9af7-42ec-829d-47ab79e4c529" class="">기획 및 웹디자이너</h3><hr id="4fd62026-1330-4cf2-8193-b7568463be40"/><p id="3f72995c-130d-4757-9bc1-7a595bb4a410" class=""><strong>Email</strong> : kimsm8203@gmail.com</p><p id="7a9a85ea-c864-46ca-bc2d-29c8feada88f" class=""><strong>Phone </strong>: 01026858203</p><p id="5fe3ea77-10b0-4f28-ae77-7117918bd30b" class="">
+</p><p id="1e3d8602-fc9b-4e50-880d-4d7b50f440b6" class="">
+</p><h2 id="83235aca-c0aa-425f-b05d-5e763ea1988b" class="block-color-default"><mark class="highlight-orange_background">보유 기술</mark></h2><ul id="5c625970-fe51-4761-b0db-cd4b687d414c" class="bulleted-list"><li style="list-style-type:disc"><strong>그래픽</strong> : 어도비 프로그램 전반, Clip Studio</li></ul><ul id="cb592ada-1c21-4b31-b2da-30211c5254e1" class="bulleted-list"><li style="list-style-type:disc"><strong>언어</strong> : html 5, css, java script</li></ul><ul id="16b29775-116b-4e61-ab1d-851e7f997c2a" class="bulleted-list"><li style="list-style-type:disc"><strong>협업툴</strong> : Git, Notion</li></ul><p id="f223dd42-bcb0-42cb-aeef-83a93bd048b2" class="">
+</p><p id="3d69d16b-f11a-4e8f-8855-69855f65667d" class="">
+</p><p id="6c337cd9-eb87-452b-9abb-1d497efd7374" class="">
+</p><h2 id="3d3d6756-ad81-407f-8070-0085cc78e549" class=""><mark class="highlight-orange_background">팀 프로젝트</mark></h2><p id="191f95e1-a3bd-42be-87ab-4a173e4218db" class="">
+</p><div id="844514da-eeff-4918-b0e4-f7cee973d98e" class="column-list"><div id="b902f046-98fd-49be-919c-bb7316a9bce9" style="width:25%" class="column"><h3 id="666095ae-a56a-4394-ba58-88651a96f0ab" class="">졸업작품</h3><p id="6bc3c823-50c3-4fde-9912-e708a8d66fb8" class=""><strong>SOMNIA</strong></p><p id="36c7f90c-14d5-4f12-8e36-ba3d97a7763b" class="">공포와 욕망이라는 감정을 소재로 신과 악몽 등의 여러 판타지적 요소가 섞여 인간인 주인공을 중심으로 흘러가는 이야기를 다룬 스토리 기반 게임 기획 프로젝트.</p><p id="8c816f96-5a9c-4848-acc5-17ab6d49c946" class="">
+</p></div><div id="aeb68898-9ecf-4594-b33f-5d804248a4c4" style="width:75%" class="column"><h3 id="3178da08-c199-4d30-a15d-8f79a22fd024" class="">기획</h3><ul id="0e95a2e3-1ef6-4d0d-b7ae-8c4593c0cca5" class="bulleted-list"><li style="list-style-type:disc">작품의 소재와 방향성에 대한 기획을 맡았습니다.</li></ul><ul id="6a98d204-0f03-4caf-9afd-3d4f8308bb5c" class="bulleted-list"><li style="list-style-type:disc">작품 소개와 배경 스토리, 인물 프로필, 맵 등의 글 작성을 담당하였습니다.</li></ul><p id="4f985678-c788-457b-bc35-f8d15d71c89f" class="">
+</p><h3 id="a1d14dda-37b9-45ad-a8fc-265f425a3cde" class="">웹사이트 개발</h3><p id="d4bbc1a8-c1e1-4fe8-b8c4-1ea53b90a932" class=""><mark class="highlight-blue"><a href="https://dxdsumin.github.io/somnia/html/cover.html">https://dxdsumin.github.io/somnia/html/cover.html</a></mark></p><ul id="4e15c5d3-45e4-4e92-955b-c61a1e6867ff" class="bulleted-list"><li style="list-style-type:disc">html과 css 그리고 js를 이용하여 웹사이트를 제작하였습니다.</li></ul><ul id="f16afd1c-e4cb-478a-9c1d-d4a5a165c867" class="bulleted-list"><li style="list-style-type:disc">기획 단계에 제출된 디자인을 기본으로, 이를 기술적으로 더 돋보일 수 있도록 수정하여 코드를 작성했습니다.</li></ul><p id="0ded2e9b-19e9-4d31-a081-60a35ad78ce0" class="">
+</p><h3 id="de413dde-8b18-40e5-9892-22b2f854e6b6" class="">그래픽 콘티 및 원화</h3><ul id="b805df21-87c1-4769-b9ca-909bcc13ce9e" class="bulleted-list"><li style="list-style-type:disc">스토리와 프로모션 영상에 들어갈 그래픽의 콘티를 담당하였고, 각 캐릭터의 원화가 될 컨셉 스케치를 담당하여 성격, 의상, 능력 등의 상세 프로필을 작성하였습니다.</li></ul><p id="78f1c70a-d970-41e1-9351-5a51c6a84729" class=""><mark class="highlight-blue"><a href="https://dxdsumin.github.io/portfolio.sumin/">SOMNIA 컨셉 아트</a></mark></p><p id="b68e450f-2027-4611-aeab-5f72bd146c8b" class="">
+</p><p id="e0121f79-4334-4527-bf6c-5d359d8a5102" class="">
+</p></div></div><div id="445745cf-9a72-4f65-bdf5-ba859cf0202a" class="column-list"><div id="b562d2c8-30b4-4bd4-8e98-b893d01e814d" style="width:25%" class="column"><h3 id="2b64be8f-483c-468a-98e7-c1611cfdd384" class="">3학년</h3><p id="fb79aafe-936d-4361-be7d-4f46b3c4cb71" class=""><strong>Oh my pet</strong></p><p id="b63a61d5-b3c4-4996-861c-cb06d3c72382" class="">팀원들의 공통점인 반려동물을 주제로 하여 이를 소개하고 사진을 전시할 웹사이트 제작 프로젝트.</p><p id="74381744-4235-4908-9c3e-16d3027f2ac7" class="">
+</p></div><div id="3ac07817-1a85-449f-b9db-37cbcd01dffd" style="width:75%" class="column"><h3 id="bb030fde-bfc9-45d4-8844-7d3b55019b33" class="">기획</h3><p id="924b5061-6421-4324-95b5-2eee62d05267" class="">팀원들 모두가 흥미를 갖고 자신의 역량을 뽐낼 수 있는 프로젝트를 제안하였고 각자의 특기사항을 파악 후 파트 분배를 맡았습니다.</p><p id="c8fc3a36-784d-41fe-969e-0a570b31b1f7" class="">
+</p><h3 id="56d51fc0-38b9-40ce-ba4a-fba7a8ac465f" class="">웹사이트 개발</h3><p id="31be21c6-7e53-43af-9aaf-ba6ca1aebb1e" class=""><mark class="highlight-blue"><a href="https://dxdsumin.github.io/Ohmypet/final/main.html">https://dxdsumin.github.io/Ohmypet/final/main.html</a></mark></p><p id="39f6990c-7634-4bf3-93a7-92c70d056b02" class="">각 반려동물을 소개하기에 적합한 기술들을 기획하고 정리하였으며 코드 작성을 맡았습니다.</p><p id="c4fde96e-1f68-4ce2-943b-f1aaf8eff1f7" class="">
+</p><p id="e7765f3f-70ca-4dbd-a41e-05e484991260" class="">
+</p></div></div><p id="8ea6c588-73cc-4ea9-8ca9-90c25e8ed1e5" class="">
+</p><p id="aa6bb4bf-d3b4-4546-ac3b-84fc18457cd2" class="">
+</p><h2 id="7d658f15-2afd-4b7f-9c55-7eb30d2a076f" class=""><mark class="highlight-orange_background">개인 프로젝트</mark></h2><p id="0ed5330f-b9c4-4b7b-bef7-e21a34734aa9" class="">
+</p><div id="1626f344-aa4e-475d-9fcf-d36d07cac637" class="column-list"><div id="4e8f409a-bb3d-4c00-a3a2-8a9db4338b1a" style="width:25%" class="column"><h3 id="89b3daed-748f-4da5-bc2f-1a8339241b52" class="">게임 기획</h3><p id="18ae9379-98d0-4867-90c1-1ff45fabf7ad" class=""><strong>달빛이 드리울 때</strong></p><p id="62c05ddd-55de-416a-8e13-aad841472510" class="">무당의 후예인 주인공이 자신의 선조가 봉인해 둔 요괴들의 봉인을 풀며 시작되는 스토리 기반 게임.</p></div><div id="f51c83ec-1a35-4bf3-a056-602d45e1ff57" style="width:75%" class="column"><h3 id="644507c8-5317-4a14-8476-86abdcb51874" class="">기획</h3><p id="cf05de0b-80dc-48fe-aa38-401ce037c729" class="">무당과 한국의 요괴들을 소재로 삼아 한국적인 것들을 이용하여 스토리를 작성하였습니다.</p><p id="3268b533-11dd-438b-872a-c0c826c6be90" class="">
+</p><h3 id="fd2a1008-c490-4993-9052-cbe05a3c8b07" class="">그래픽</h3><ul id="974ae5aa-0e75-44e1-b2e2-995364379a34" class="bulleted-list"><li style="list-style-type:disc">메인 일러스트를 제작하여 전체 분위기를 알 수 있도록 하였습니다.</li></ul><ul id="5e586e39-f86d-4e40-881c-90e64dae0686" class="bulleted-list"><li style="list-style-type:disc">주인공과 이외 등장인물의 컨셉아트를 스케치하였습니다.</li></ul><ul id="77a43bd1-c369-488f-beab-77aad18f88bc" class="bulleted-list"><li style="list-style-type:disc">배경 스토리를 알 수 있도록 짧은 만화를 그렸습니다.</li></ul><p id="231aca4a-b5b3-47e4-8b08-6e5a5d3d7f0e" class="">
+</p><p id="e48105a3-588c-443c-b8c4-60a3cd4a3628" class=""><mark class="highlight-blue"><a href="https://www.notion.so/0e95dbe6ff9b404fade7cdea60feb061?pvs=21">달빛이 드리울 때 기획안</a></mark></p><p id="105eec19-c92f-4333-a2a8-68be19edeb1e" class="">
+</p><p id="997449d5-f297-4eeb-bd64-43242c797f50" class="">
+</p><p id="df12941a-7377-452c-9458-11ae4806aa01" class="">
+</p></div></div><div id="7cca681a-be26-461c-9c0d-038ce9f978ea" class="column-list"><div id="d0ede960-e073-427d-a089-811fedfd5cd5" style="width:25%" class="column"><h3 id="b9539e99-539b-4801-b309-4eafb9fbadf5" class="">게임 기획</h3><p id="8c1bc09c-8e5a-46a4-8ffe-6264df12f6d3" class=""><strong>정결정도</strong></p><p id="446239a8-4944-4b05-9772-db09c7ff5d04" class="">악의적인 일에 휘말린 평범한 존재가 선과 정의에 대해 고민하고 스스로의 신념을 지켜나가기 위해 나아가는 이야기를 담은 스토리 기반 게임.</p><p id="61456f3a-b25d-48a3-8c85-8d4c7be4bd68" class="">
+</p><p id="f094c70c-ba3c-427f-949b-cb7688dc2a2a" class="">
+</p></div><div id="2cc87d29-ef4f-412a-8f05-a88478f8b112" style="width:75%" class="column"><h3 id="e5a16345-2e69-4fa1-a18a-27de4bee4c82" class="">기획</h3><ul id="6e48e96d-fc07-4bbc-b568-3390d413ef55" class="bulleted-list"><li style="list-style-type:disc">주관적인 시선에 따라 변할 수 있는 <em>정의에 대해 정의</em>하고자 여러 사람을 만나 이에 대해 토론했습니다.</li></ul><ul id="55127b30-8c1e-42e5-a236-eab1b07468da" class="bulleted-list"><li style="list-style-type:disc">개요와 전체 스토리 및 타임라인, 주요 분기점 등을 구상하였습니다.</li></ul><ul id="c1b5f018-736b-4128-908f-736c40a88587" class="bulleted-list"><li style="list-style-type:disc">각 등장인물의 상세 프로필을 짜고 이를 통해 스토리가 입체적으로 진행될 수 있도록 기획하였습니다.</li></ul><p id="666fe83f-4308-4991-9ee6-a7de857667bc" class="">
+</p><h3 id="2956ab50-0374-4dd0-8875-9088e123fb75" class="">그래픽</h3><p id="2e14c457-a937-48ca-b51c-90266857bd45" class="">주인공 컨셉 아트 스케치를 하였고, 이를 통해 그래픽의 데포르메를 확정 지었습니다.</p><p id="1f9a8805-e853-489a-8050-a1f40fcb28d7" class="">
+</p><p id="f5789d69-59d5-4604-846d-877c64835c1f" class=""><mark class="highlight-blue"><a href="https://www.notion.so/4406eed2b0d041aa8df372fe96045c14?pvs=21">정결정도 기획안</a></mark></p><p id="7866514f-4b00-4e49-a201-fcae734e27f1" class="">
+</p></div></div><p id="2477733d-88b6-4c05-a54d-4c000071f773" class="">
+</p><p id="ea1c1bb4-8253-4d17-a677-5022c1a7c872" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
